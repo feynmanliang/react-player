@@ -28,6 +28,9 @@ export default class FilePlayer extends Base {
   pause () {
     this.player.pause()
   }
+  rewind () {
+    this.player.currentTime = 0.0
+  }
   stop () {
     this.pause()
     this.player.removeAttribute('src')

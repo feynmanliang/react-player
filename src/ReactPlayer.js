@@ -25,6 +25,12 @@ export default class ReactPlayer extends Component {
   componentWillUnmount () {
     clearTimeout(this.progressTimeout)
   }
+  rewind = () => {
+    const player = this.refs.player
+    if (player) {
+      player.rewind()
+    }
+  }
   shouldComponentUpdate (nextProps) {
     return (
       this.props.url !== nextProps.url ||
